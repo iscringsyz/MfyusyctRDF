@@ -28,12 +28,7 @@ jobs:
         uses: dawidd6/action-get-tag@v1
         with:
           # Optionally strip `v` prefix
-          strip_v: true
-        
-      - name: path
-        run: echo "::set-output name=path::Pokete-${{ steps.tag.outputs.tag }}-x86_64.AppImage"
-        id: path
-      
+
       # Runs a set of commands using the runners shell
       - name: Prepare
         run: |
